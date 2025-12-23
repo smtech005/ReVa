@@ -4,7 +4,7 @@ Official releases for the ReVa personal finance mobile app.
 
 ## Download Latest Version
 
-📱 **[Download ReVa v1.0.0](https://github.com/smtech005/reva-releases/releases/download/v1.0.0/ReVa.apk)**
+📱 **[Download ReVa v1.0.0](https://github.com/smtech005/ReVa/releases/download/v1.0.0/ReVa.apk)**
 
 ## Installation
 
@@ -24,7 +24,7 @@ Official releases for the ReVa personal finance mobile app.
 
 ## Changelog
 
-### v1.0.0 (December 2024)
+### v1.0.0 (December 2025)
 - Initial release
 - Money location tracking
 - Cash denomination support
