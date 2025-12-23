@@ -1,0 +1,6 @@
+# Ignore everything except release files
+*
+!README.md
+!version.json
+!LICENSE
+!.gitignore

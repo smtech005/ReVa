@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "buildNumber": 1,
+  "releaseNotes": "Initial release of ReVa!\n\n• Track your money across multiple locations\n• Cash denominations (৳5 to ৳1000)\n• Mobile banking & bank accounts\n• Snack inventory tracking\n• Loan management\n• Financial insights\n• Offline support",
+  "mandatory": false,
+  "downloadUrl": "https://github.com/smtech005/reva-releases/releases/download/v1.0.0/ReVa.apk",
+  "minVersion": "1.0.0",
+  "releaseDate": "2024-12-23"
+}
