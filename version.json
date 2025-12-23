@@ -1,9 +1,9 @@
 {
-  "version": "2.0.0",
-  "buildNumber": 2,
-  "releaseNotes": "ReVa v2.0.0 Updates!\n\n• Fixed app crash on startup\n• Fixed FCM push notifications\n• Fixed navigation bar active state\n• Improved stability\n• Added Google Analytics\n• Better offline support",
+  "version": "2.1.0",
+  "buildNumber": 3,
+  "releaseNotes": "ReVa v2.1.0 Updates!\n\n Faster update checks via CDN\n Improved version check (1 hour interval)\n Bug fixes",
   "mandatory": false,
-  "downloadUrl": "https://github.com/smtech005/ReVa/releases/download/v2.0.0/ReVa.apk",
+  "downloadUrl": "https://github.com/smtech005/ReVa/releases/download/v2.1.0/ReVa.apk",
   "minVersion": "1.0.0",
   "releaseDate": "2025-12-23"
 }
