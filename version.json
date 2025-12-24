@@ -1,0 +1,9 @@
+{
+  "version": "2.3.0",
+  "buildNumber": 5,
+  "releaseNotes": "ReVa v2.3.0 - Money Transfer & Change Tracking!\n\n💸 Cash Expense with Change:\n• Pay with larger notes, record change received\n• Net expense auto-calculated\n• Track exactly what notes you gave and got back\n\n🔄 Fund Transfer:\n• Transfer money between locations\n• Move cash from wallet to bank\n• Withdraw from mobile banking to cash\n• Full note tracking for cash transfers\n\n👤 Profile on Home:\n• See your profile photo and name on dashboard\n• Quick access to your identity\n\n📊 Better Transaction History:\n• Properly sorted by date (newest first)\n• Transfer transactions shown in blue\n• Clear transaction type indicators",
+  "mandatory": false,
+  "downloadUrl": "https://github.com/smtech005/ReVa/releases/download/v2.3.0/ReVa-v2.3.0.apk",
+  "minVersion": "2.2.0",
+  "releaseDate": "2025-12-24"
+}
