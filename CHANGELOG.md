@@ -7,6 +7,63 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [6.0.0.1] - 2026-11-07
+
+### 🚀 Major Highlights
+- **Physical Cash Change Register & Note Breakdown**: Complete end-to-end support for cash transactions with exact notes handed over (tendered), automated expected change calculation, and interactive change received note breakdown with greedy algorithm auto-fill.
+- **Deep Google Gemini AI Integration (Free & Pro Tiers)**: Direct integration with Google AI Studio using on-device encrypted key storage. Includes active 2025/2026 models (`gemini-2.5-flash`, `gemini-2.0-flash`, `gemini-2.0-flash-lite`, `gemini-1.5-flash`, `gemini-2.5-pro`, `gemini-1.5-pro`) with an intelligent multi-model fallback engine.
+- **AI Financial Suite**:
+  - **ReVa AI Interactive Advisor**: Context-aware personal finance chatbot with real-time awareness of cash balances, bank accounts, loans, and recent transactions.
+  - **Natural Language Quick Log**: Type queries like *"Paid 500 note for 120 taka rickshaw, got 380 back"* to auto-populate net price, category, cash tendered, and change received.
+  - **"Can I Afford This?" Purchase Simulator**: AI decision matrix analyzing safety buffers, debt ratio, and optimal payment methods before making purchases.
+  - **AI Deep Expense Leak Analyzer & Financial Health Scorecards**: Algorithmic scoring (0–100) and automated detection of excessive spending categories.
+- **Standardized Categories**: Standardized expense and income categories across manual forms, Quick Log, and AI summaries.
+- **Emerald Fintech UI/UX Overhaul**: Modern emerald styling, glassmorphic cards, sticky edge-to-edge header with instant AI trigger, floating mobile bottom navigation button, and accessible Radix confirmation dialogs.
+- **Signed Android Production Release**: Official `ReVa-v6.0.0.1.apk` (4.24 MB) built and signed with dedicated release keystore and verified under APK Signature Schemes v1 & v2.
+
+### Added
+- **Physical Cash Change Register (`/dashboard/money`)**:
+  - Tendered cash denomination buttons (৳1000, ৳500, ৳200, ৳100, ৳50, ৳20, ৳10, ৳5).
+  - Automated expected change calculator (`cashTendered - amount`).
+  - Interactive change notes received counter with one-tap "Auto-Fill Breakdown" using optimal greedy change breakdown (`calculateOptimalChangeNotes`).
+  - Transaction schema extended with `cashTendered`, `changeAmount`, and `changeNotes: { denomination, count }[]`.
+- **Google Gemini AI Architecture (`lib/ai-storage.ts`, `lib/gemini.ts`)**:
+  - Obfuscated/encrypted client-side API key storage via `@capacitor/preferences` with localStorage fallback.
+  - Model registry categorizing models into **Free Tier** (up to 15–30 RPM, no credit card required) and **Pro / Advanced Tier**.
+  - Resilient `callGeminiApiWithFallback`: Seamlessly falls back across `gemini-2.5-flash` → `gemini-2.0-flash` → `gemini-1.5-flash` on endpoint shifts or 404 errors.
+  - `askGeminiAdvisor`: Live context-aware prompt feeding net worth, account breakdown, pending loans, and recent transactions into the AI prompt.
+  - `parseTransactionNaturalLanguage`: Zero-shot NLP extraction of transactions and cash change returns.
+  - `evaluateAffordabilityWithAI`: Real-time risk and affordability assessment.
+  - `analyzeExpensesDeeplyWithAI`: Algorithmic burn-rate calculation, top cash leak detection, and actionable savings advice.
+  - `generateFinancialHealthReport`: Comprehensive financial audit report card.
+- **Standardized Categories (`lib/constants.ts`)**:
+  - Standardized Expense Categories: Food & Dining, Transportation, Groceries & Bazar, Utilities & Bills, Shopping & Clothing, Healthcare & Medicine, Education & Learning, Housing & Rent, Entertainment, Personal Care, Family & Gifts, Snack Inventory, Other.
+  - Standardized Income Categories: Salary, Freelance, Business & Sales, Gift / Salami, Investment Profit, Refund & Cashback, Other Income.
+  - Pre-defined icons and color identifiers for each category.
+- **Modern UI Components**:
+  - `AppHeader` (`components/app-header.tsx`): Unified sticky edge-to-edge header with route title, BDT badge, haptic back navigation, and instant ReVa AI trigger.
+  - `MobileNav` (`components/mobile-nav.tsx`): Elevated center floating AI trigger button with pulsating indicator.
+  - `AiAssistantModal` (`components/ai-assistant-modal.tsx`): Interactive bottom-sheet and modal chat interface with quick suggestion chips and live financial awareness.
+  - `ConfirmDialog` (`components/confirm-dialog.tsx`): Reusable accessible Radix dialog replacing native browser `window.confirm()`.
+- **AI Settings & Model Manager (`/dashboard/account`)**:
+  - Encrypted Gemini API key input with show/hide eye toggle and direct link to Google AI Studio.
+  - Model selector grouping Free and Pro models with rate limits and feature badges.
+  - "Test Connection" button validating key against live Gemini API endpoints.
+- **Android Release Signing**:
+  - Dedicated production keystore `android/app/reva-release.keystore`.
+  - Configured Gradle `signingConfigs.release` with v1 & v2 signing enabled.
+  - Upgraded Android build configuration to `versionCode 60001` and `versionName "6.0.0.1"`.
+
+### Changed
+- Replaced flat gray cards across the entire application with emerald glassmorphic cards, emerald borders, and micro-animations.
+- Updated `dashboard/page.tsx` with dynamic balance card, quick metrics grid, and natural language AI Quick Log.
+- Converted `dashboard/loans/page.tsx` and `dashboard/snacks/page.tsx` to real-time Firestore mutations with confirm dialogs.
+- Converted `dashboard/insights/page.tsx` to use live transaction aggregation, dynamic expense leak analyzer, and AI health audit.
+- Updated `public/version.json` and `out/version.json` to version `6.0.0.1`.
+- Cleaned up Gradle wrapper to Gradle 8.11.1 and AGP 8.8.0 for 100% reproducible and offline builds.
+
+---
+
 ## [5.0.0.0] - 2026-11-07
 
 ### 🚀 Major Highlights

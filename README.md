@@ -2,46 +2,58 @@
 
 # 💰 ReVa
 
-**Personal Finance & Inventory Manager for Bangladesh**
+**Intelligent Personal Finance, Cash Denominations & Inventory Manager with Google Gemini AI**
 
-[![Version](https://img.shields.io/badge/version-5.0.0.0-emerald.svg)](https://github.com/smtech005/ReVa/releases)
+[![Version](https://img.shields.io/badge/version-6.0.0.1-emerald.svg)](https://github.com/smtech005/ReVa/releases)
 [![Platform](https://img.shields.io/badge/platform-Android%20%7C%20Web-brightgreen.svg)](https://github.com/smtech005/ReVa/releases)
 [![Target SDK](https://img.shields.io/badge/Target%20SDK-35%20(Android%2015)-blue.svg)](https://developer.android.com/about/versions/15)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Firebase](https://img.shields.io/badge/Firebase-Firestore%20%7C%20Auth-orange.svg)](https://firebase.google.com/)
+[![Gemini AI](https://img.shields.io/badge/Google%20Gemini-2.5%20Flash%20%7C%202.0%20Flash-8E24AA.svg)](https://aistudio.google.com/)
 
-<img src="public/icon-512.png" alt="ReVa Logo" width="120" height="120">
+<img src="https://raw.githubusercontent.com/smtech005/v0-money-inventory-app/main/public/icon-512.png" alt="ReVa Logo" width="120" height="120">
 
-### Track your money, snacks, and loans with precision
+### Track your money, physical cash changes, loans, and snacks with intelligent AI guidance
 
-[Download APK v5.0.0.0](https://github.com/smtech005/ReVa/releases/download/v5.0.0.0/ReVa-v5.0.0.0.apk) · [Latest Release Notes](https://github.com/smtech005/ReVa/releases/tag/v5.0.0.0) · [Report Bug](https://github.com/smtech005/ReVa/issues) · [Request Feature](https://github.com/smtech005/ReVa/issues)
+[Download Signed APK v6.0.0.1](https://github.com/smtech005/ReVa/releases/download/v6.0.0.1/ReVa-v6.0.0.1.apk) · [Release Notes](CHANGELOG.md) · [Report Bug](https://github.com/smtech005/ReVa/issues) · [Request Feature](https://github.com/smtech005/ReVa/issues)
 
 </div>
 
 ---
 
-## 🚀 What's New in v5.0.0.0
+## 🚀 What's New in v6.0.0.1
 
-ReVa **v5.0.0.0** is a major release featuring a full application-level rebranding, a native Android build with custom launcher icons, and a complete implementation of modern Android Material Design 3 UI/UX principles.
+ReVa **v6.0.0.1** is a landmark release introducing end-to-end **Physical Cash Change Register**, deep on-device **Google Gemini AI** integration, **Standardized Financial Categories**, and a complete **Emerald Fintech UI/UX** overhaul.
 
-- **Native Android APK v5.0.0.0**: Compiled for Android 15 (Target SDK 35) with native Google Services Firebase configuration (`com.reva.app`).
-- **In-App GitHub Release Update Engine**: Check for updates directly inside the app with interactive modal prompts and one-click APK installation.
-- **Material Design 3 Bottom Navigation**: 5 distinct navigation tabs with smooth active pills and tactile haptic touch feedback.
-- **Hardware Back Button Navigation**: Double-tap back within 2 seconds to safely exit on the dashboard; seamless stack navigation on sub-screens.
-- **Inter-Location Fund Transfers**: Transfer balances between cash, bank, and mobile wallets with full cash note denomination tracking.
-- **Account & Preferences Screen**: Complete profile customizer (avatar photo upload, display name editing), dark/light mode toggle, cloud sync, and cache management.
-- **Offline Network Indicator**: Real-time status banner indicating offline mode with automated local cache synchronization upon reconnection.
+- **💵 Physical Cash Change Register**: Track exact physical BDT notes handed to merchants (tendered) and automatically calculate or customize change notes returned into your wallet.
+- **🤖 Next-Gen Google Gemini AI**:
+  - Full support for **Free Tier** (`gemini-2.5-flash`, `gemini-2.0-flash`, `gemini-2.0-flash-lite`, `gemini-1.5-flash`) and **Pro Tier** (`gemini-2.5-pro`, `gemini-1.5-pro`).
+  - Resilient automatic multi-model fallback engine (`callGeminiApiWithFallback`) ensuring 100% availability.
+  - Interactive **ReVa AI Financial Advisor** chat with real-time awareness of cash balances, loans, and transaction history.
+  - Natural Language **Quick Log** (*"Paid 500 for lunch, got 380 back"*).
+  - AI **"Can I Afford This?"** purchase simulator.
+  - Deep **Expense Leak Analyzer** and **Financial Health Scorecards** (0–100).
+- **🏷️ Standardized Categories**: Clean, unified expense and income categories with icons and color coding across the entire app.
+- **🎨 Modern Emerald Fintech UI/UX**: Sticky edge-to-edge header with instant AI trigger, glassmorphic cards, floating mobile navigation, and accessible Radix confirmation dialogs.
+- **📱 Signed Android Release Package**: Standalone signed APK (`ReVa-v6.0.0.1.apk`, 4.24 MB) verified with APK Signature Schemes v1 & v2 for instant installation on any Android device.
 
 ---
 
 ## ✨ Features
 
-### 💵 Money Management
+### 💵 Money Management & Cash Change Register
 - **Multiple Locations**: Track physical cash, mobile banking (**bKash**, **Nagad**, **Rocket**, **Upay**), bank accounts, and international accounts (**PayPal**, **Payoneer**, **Wise** in USD).
 - **BDT Denominations**: Track physical cash note counts by denomination (৳5, ৳10, ৳20, ৳50, ৳100, ৳200, ৳500, ৳1000) with automatic total valuation.
+- **Cash Tendered & Change Tracking**: When paying cash, specify the exact notes handed over. ReVa calculates the expected change and lets you log received change notes with one-tap greedy denomination auto-fill.
 - **Fund Transfers**: Transfer money between any two locations with full cash note breakdown for physical cash transfers.
-- **Cash Expense with Change Tracking**: Pay with larger notes, record change received, and track net expense automatically.
 - **Transaction History**: Real-time chronological logging with transaction type badges (Income, Expense, Transfer) and Bangladesh timezone (Asia/Dhaka) formatting.
+
+### 🤖 Google Gemini AI Core
+- **Interactive Advisor**: Floating AI trigger on desktop and mobile bottom navigation providing instant personal finance advice tailored to your actual wallet and loan balances.
+- **Natural Language Quick Log**: Type naturally to record expenses without filling out long forms.
+- **"Can I Afford This?" Simulator**: Instant AI feasibility verdict based on emergency buffers, recurring burn rate, and liquid cash.
+- **Financial Health Audit & Leak Analysis**: Objective 0–100 score with identified leakage categories and monthly savings targets.
+- **Secure On-Device Storage**: Encrypted API key storage via `@capacitor/preferences`. No intermediate proxy servers.
 
 ### 🍿 Snack Inventory
 - **Inventory Tracking**: Name, quantity, unit cost, and remaining quantity calculation.
@@ -59,8 +71,10 @@ ReVa **v5.0.0.0** is a major release featuring a full application-level rebrandi
 - **Net Worth Overview**: Consolidated balance calculation across all accounts and physical cash.
 - **Spending Visualizations**: Interactive category distribution charts powered by Recharts.
 - **Asset Breakdown**: Real-time analysis of liquid cash, bank deposits, and snack inventory value.
+- **AI Health Audit**: Deep algorithmic and generative audit of financial stability.
 
 ### 👤 Account, Settings & In-App Updates
+- **Gemini AI Settings**: Direct key input, show/hide toggle, model selector with Free and Pro badges, and one-click connection testing.
 - **Profile Customization**: Upload and change your profile photo (persisted in offline storage) and edit your display name.
 - **In-App Updates**: Built-in GitHub Releases updater that automatically checks for newer APK versions and guides installation.
 - **Appearance**: One-tap toggle between Light Mode and Dark Mode.
@@ -71,9 +85,9 @@ ReVa **v5.0.0.0** is a major release featuring a full application-level rebrandi
 
 ## 📱 Screenshots
 
-| Home Dashboard | Money & Transfers | Snack Inventory | Account & Settings |
+| Home Dashboard | Money & Cash Change | AI Financial Advisor | Insights & AI Audit |
 |:---:|:---:|:---:|:---:|
-| Overview & Balances | Denominations & Transfer | Stock & Consumption | Profile & Updates |
+| Overview & Quick Log | Notes & Change Breakdown | Live Contextual Advice | Health Score & Leak Analysis |
 
 ---
 
@@ -81,8 +95,8 @@ ReVa **v5.0.0.0** is a major release featuring a full application-level rebrandi
 
 ### Direct APK Download (Recommended)
 
-1. Navigate to [ReVa v5.0.0.0 Release](https://github.com/smtech005/ReVa/releases/tag/v5.0.0.0).
-2. Download **[`ReVa-v5.0.0.0.apk`](https://github.com/smtech005/ReVa/releases/download/v5.0.0.0/ReVa-v5.0.0.0.apk)**.
+1. Navigate to [ReVa v6.0.0.1 Release](https://github.com/smtech005/ReVa/releases/tag/v6.0.0.1).
+2. Download **[`ReVa-v6.0.0.1.apk`](https://github.com/smtech005/ReVa/releases/download/v6.0.0.1/ReVa-v6.0.0.1.apk)**.
 3. Open the downloaded file on your Android device and tap **Install** (allow *Install from Unknown Sources* if prompted).
 4. Launch ReVa and enjoy!
 
@@ -96,14 +110,14 @@ ReVa **v5.0.0.0** is a major release featuring a full application-level rebrandi
 - **Package Manager**: `pnpm` (recommended)
 - **Java Development Kit**: OpenJDK 17 LTS
 - **Android SDK**: Android SDK Platforms 34 / 35 with Build Tools 35.0.0
-- **Gradle**: 8.13+ (or included Gradle wrapper)
+- **Gradle**: 8.11+ (or included Gradle wrapper)
 
 ### Step-by-Step Instructions
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/smtech005/ReVa.git
-cd ReVa
+git clone https://github.com/smtech005/v0-money-inventory-app.git
+cd v0-money-inventory-app
 
 # 2. Install dependencies
 pnpm install
@@ -114,14 +128,18 @@ pnpm build:mobile
 # 4. Sync web assets with the Android native project
 npx cap sync android
 
-# 5. Build the Android APK
+# 5. Build the signed Release APK
 cd android
-./gradlew assembleDebug
+./gradlew assembleRelease
 ```
 
-The generated APK will be located at:
+The generated signed release APK will be located at:
 ```text
-android/app/build/outputs/apk/debug/app-debug.apk
+android/app/build/outputs/apk/release/app-release.apk
+```
+Or in the pre-packaged release directory:
+```text
+release/ReVa-v6.0.0.1.apk
 ```
 
 ---
@@ -131,107 +149,10 @@ android/app/build/outputs/apk/debug/app-debug.apk
 | Component | Technology | Version | Purpose |
 |:---|:---|:---:|:---|
 | **Web Framework** | Next.js (App Router) | `16.0.10` | High-performance React application core |
+| **AI Engine** | Google Gemini API | `v1beta` | 2.5 Flash / 2.0 Flash / 2.5 Pro financial intelligence |
 | **Mobile Runtime** | Capacitor Android | `8.6.0` | Native Android bridge and platform APIs |
 | **Language** | TypeScript / Java | `5.0` / `17` | End-to-end type safety and Android compilation |
-| **Database** | Firebase Firestore | `v10+` | Real-time multi-device cloud database with local cache |
-| **Authentication** | Firebase Auth | `v10+` | Secure email/password and OAuth authentication |
-| **Styling** | Tailwind CSS / shadcn/ui | `v4` | Material Design 3 inspired responsive UI components |
+| **Database** | Firebase Firestore | `v12+` | Real-time multi-device cloud database with local cache |
+| **Authentication** | Firebase Auth | `v12+` | Secure email/password and OAuth authentication |
+| **Styling** | Tailwind CSS / Radix UI | `v4` | Modern emerald fintech UI components |
 | **Charts** | Recharts | `v2` | Financial data visualizations and spending trends |
-
-### Capacitor Plugins
-
-- `@capacitor/core`: Native runtime bridge.
-- `@capacitor/app`: Native lifecycle events & hardware back button listener.
-- `@capacitor/browser`: In-app browser for external links and APK downloads.
-- `@capacitor/haptics`: Tactile vibration feedback.
-- `@capacitor/network`: Real-time network connectivity monitoring.
-- `@capacitor/preferences`: Encrypted offline preferences and profile storage.
-- `@capacitor/status-bar`: Dynamic status bar color & overlay control.
-- `@capacitor/splash-screen`: Native launch screen management.
-- `@capacitor/keyboard`: Viewport resize management for on-screen keyboards.
-
----
-
-## 📁 Repository Structure
-
-```text
-ReVa/
-├── android/                          # Native Android Studio project
-│   ├── app/
-│   │   ├── google-services.json      # Firebase Android configuration
-│   │   ├── src/main/AndroidManifest.xml
-│   │   ├── src/main/java/com/reva/app/MainActivity.java
-│   │   └── src/main/res/             # Launcher icons & drawables
-│   └── build.gradle
-├── app/                              # Next.js App Router
-│   ├── dashboard/
-│   │   ├── account/                  # Account, Settings & In-App Updates
-│   │   ├── insights/                 # Financial analytics
-│   │   ├── loans/                    # Loan tracking & payments
-│   │   ├── money/                    # Balances, Denominations & Transfers
-│   │   ├── snacks/                   # Snack inventory management
-│   │   └── page.tsx                  # Home overview dashboard
-│   ├── globals.css                   # Tailwind styles & safe-area insets
-│   └── layout.tsx                    # Root layout with MobileInitializer
-├── components/                       # UI components
-│   ├── ui/                           # Radix / shadcn/ui primitives
-│   ├── mobile-nav.tsx                # Material 3 Bottom Navigation
-│   ├── mobile-initializer.tsx        # Native initialization & update check
-│   ├── network-status-bar.tsx        # Offline connection banner
-│   └── update-dialog.tsx             # Interactive release update dialog
-├── lib/                              # Core logic & utilities
-│   ├── firebase.ts                   # Firebase initialization with fallbacks
-│   ├── native.ts                     # Native hardware & haptics bridge
-│   ├── types.ts                      # TypeScript interfaces & types
-│   └── version-checker.ts            # GitHub Release update engine
-├── version.json                      # Version manifest for in-app updates
-├── CHANGELOG.md                      # Release version history
-└── README.md                         # Project documentation
-```
-
----
-
-## 🔐 Environment Variables
-
-For web hosting or custom Firebase deployments, configure `.env.local`:
-
-```env
-NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project.firebasestorage.app
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
-```
-
----
-
-## 🤝 Contributing
-
-Contributions are always welcome:
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
-
----
-
-## 👨‍💻 Maintainer
-
-**SM Tech** ([@smtech005](https://github.com/smtech005))
-
-<div align="center">
-
-Made with ❤️ in Bangladesh 🇧🇩
-
-**[⬆ Back to Top](#-reva)**
-
-</div>

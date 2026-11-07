@@ -1,9 +1,9 @@
 {
-  "version": "5.0.0.0",
-  "buildNumber": 50000,
-  "releaseNotes": "ReVa v5.0.0.0 - Major Release & Android Native Build!\n\n✨ New Features & Improvements:\n• Full ReVa app rebranding\n• In-app GitHub release updater & Account/Settings screen\n• Fund transfer between accounts & cash note tracking\n• Snack & loan management fixes and real-time validations\n• Native Android Material 3 bottom navigation, haptics & gestures\n• Hardware back button support & offline status indicator\n• Stability and performance optimizations across all dashboards",
+  "version": "6.0.0.1",
+  "buildNumber": 60001,
+  "releaseNotes": "ReVa v6.0.0.1 - Major Release & Next-Gen AI Financial Core!\n\n✨ New Features & Improvements:\n• Physical Cash Change Register: Track tendered notes & exact change received back\n• Direct Google Gemini AI Integration (Gemini 2.5 Flash, 2.0 Flash, 2.5 Pro) with smart fallback\n• ReVa AI Interactive Advisor with real-time net-worth and balance context\n• Natural Language Quick Transaction Log (\"Paid 500 for lunch, got 380 back\")\n• AI \"Can I Afford This?\" Purchase Simulator\n• AI Deep Expense Leak & Financial Health Scorecards\n• Standardized expense and income categories across the entire system\n• Modern emerald fintech UI/UX with glassmorphic cards and unified headers",
   "mandatory": false,
-  "downloadUrl": "https://github.com/smtech005/ReVa/releases/download/v5.0.0.0/ReVa-v5.0.0.0.apk",
-  "minVersion": "2.0.0",
+  "downloadUrl": "https://github.com/smtech005/ReVa/releases/download/v6.0.0.1/ReVa-v6.0.0.1.apk",
+  "minVersion": "5.0.0.0",
   "releaseDate": "2026-11-07"
 }
