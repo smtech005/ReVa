@@ -1,3 +1,24 @@
+# [5.0.0.0] - 2026-11-07
+
+### Added
+- **Full ReVa App-Level Rebranding & Native Android Build**
+  - Compiled Native Android APK v5.0.0.0 (Target SDK 35, Build #50000)
+  - Custom multi-density ReVa app launcher icons & adaptive icons
+  - Firebase configuration with Google Services plugin
+- **In-App GitHub Release Update Engine & Settings Screen**
+  - Dedicated Account & Settings page (`/dashboard/account`)
+  - Direct update check against GitHub Releases with interactive download modal
+  - Background update notifications with rate-limited caching
+- **Material Design 3 Android UI/UX Philosophy**
+  - Android bottom navigation bar with active indicator pills
+  - Hardware back button navigation & double-tap to exit on dashboard
+  - Tactile haptic touch feedback on tab changes and primary actions
+  - Real-time offline network status bar indicator
+  - Safe area insets (`viewport-fit=cover`) and edge-to-edge layout
+- **Financial & Inventory Features**
+  - Inter-account fund transfers with denomination cash note tracking
+  - Snack consumption logs and loan installment tracking
+
 # [3.1.1] - 2025-12-24
 
 ### Fixed

@@ -4,7 +4,7 @@
 
 **Personal Finance Manager for Bangladesh**
 
-[![Version](https://img.shields.io/badge/version-3.1.1-green.svg)](https://github.com/smtech005/ReVa/releases)
+[![Version](https://img.shields.io/badge/version-5.0.0.0-green.svg)](https://github.com/smtech005/ReVa/releases)
 [![Platform](https://img.shields.io/badge/platform-Android-brightgreen.svg)](https://github.com/smtech005/ReVa/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Firebase](https://img.shields.io/badge/Firebase-Enabled-orange.svg)](https://firebase.google.com/)

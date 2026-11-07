@@ -1,9 +1,9 @@
 {
-  "version": "3.1.1",
-  "buildNumber": 5,
-  "releaseNotes": "ReVa v3.1.1 - Bug Fixes and Improvements!\n\n🔧 Bug Fixes:\n• Fixed account page linting issues\n• Improved error handling in data fetching\n• Resolved Firestore index issues for better performance\n\n📱 UI Improvements:\n• Enhanced account settings page\n• Better error messages for failed operations\n\n• General stability improvements",
+  "version": "5.0.0.0",
+  "buildNumber": 50000,
+  "releaseNotes": "ReVa v5.0.0.0 - Major Release & Android Native Build!\n\n✨ New Features & Improvements:\n• Full ReVa app rebranding\n• In-app GitHub release updater & Account/Settings screen\n• Fund transfer between accounts & cash note tracking\n• Snack & loan management fixes and real-time validations\n• Native Android Material 3 bottom navigation, haptics & gestures\n• Hardware back button support & offline status indicator\n• Stability and performance optimizations across all dashboards",
   "mandatory": false,
-  "downloadUrl": "https://github.com/smtech005/ReVa/releases/download/v3.1.1/ReVa-v3.1.1.apk",
-  "minVersion": "3.1.1",
-  "releaseDate": "2025-12-24"
+  "downloadUrl": "https://github.com/smtech005/ReVa/releases/download/v5.0.0.0/ReVa-v5.0.0.0.apk",
+  "minVersion": "2.0.0",
+  "releaseDate": "2026-11-07"
 }
